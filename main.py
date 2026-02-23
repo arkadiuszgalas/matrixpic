@@ -1,8 +1,11 @@
 import grid
-matrix_len = len(grid.matrix)
-matrix_len_in = len(grid.matrix[0])
 
-print(str(matrix_len_in))
+grid_height = len(grid.matrix)
+grid_width = len(grid.matrix[0])
 
-for i in range(matrix_len):
-   print(grid.matrix[i][0], end ='')
+print(f"Matrix after transposition has dimensions: {grid_width}x{grid_height}")
+
+for i in range(grid_width):
+   for j in range(grid_height):
+      print(grid.matrix[j][i], end ='')
+   print("")
